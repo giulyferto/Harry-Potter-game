@@ -159,7 +159,7 @@ public class GamePlay {
 
 
     public void chooseSpells() {
-        Spells spells = new Spells();
+        Spell spells = new Spell();
         int continueMenu;
         do {
             System.out.println("Por favor ingrese una categoria de hechizos: \n");
@@ -189,8 +189,8 @@ public class GamePlay {
         } while (continueMenu == 1);
     }
 
-    private Spells getAttackSpells(Scanner keyboard) {
-        Spells spells = new Spells();
+    private Spell getAttackSpells(Scanner keyboard) {
+        Spell spells = new Spell();
 
         Set<String> attackSpells = new HashSet<String>();
         System.out.println("\nHechizos de ataque:");
@@ -259,8 +259,8 @@ public class GamePlay {
         return spells;
     }
 
-    private Spells getHealingSpells(Scanner keyboard) {
-        Spells spells = new Spells();
+    private Spell getHealingSpells(Scanner keyboard) {
+        Spell spells = new Spell();
         Set<String> healingSpells = new HashSet<String>();
         System.out.println("\nHechizos de Sanacion: ");
         System.out.println("\t1) Anapneo: \n 20pts de sanacion, 15pts energia magica requerida.");
@@ -313,8 +313,8 @@ public class GamePlay {
         return spells;
     }
 
-    private Spells getRecoverySpells(Scanner keyboard) {
-        Spells spells = new Spells();
+    private Spell getRecoverySpells(Scanner keyboard) {
+        Spell spells = new Spell();
         Set<String> recoverySpells = new HashSet<String>();
         System.out.println("\nHechizos de Recuperacion: ");
         System.out.println("\t1) Contorsione: \n 15pts de sanacion, 8pts energia magica requerida.");
