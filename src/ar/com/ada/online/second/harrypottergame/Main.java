@@ -1,8 +1,18 @@
 package ar.com.ada.online.second.harrypottergame;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+        Scanner keyboard = new Scanner(System.in);
+
+        GamePlay player = new GamePlay();
+        //Se ejecuta el metodo una vez
+        player.ChoosePlayer();
+        player.chooseSpells();
+
+
     }
 }
+
