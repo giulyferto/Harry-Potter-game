@@ -8,7 +8,7 @@ public abstract class Character {
     protected char location;
     protected Integer life = 100;
     protected Integer magicEnergy = 100;
-    protected Set <Spells> spells;
+    protected Set <Spell> spells;
 //Constructor vacio
 
     public Character() {
