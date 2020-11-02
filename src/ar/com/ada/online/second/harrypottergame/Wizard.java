@@ -3,7 +3,20 @@ package ar.com.ada.online.second.harrypottergame;
 import java.util.Objects;
 
 public class Wizard extends Character{
-    private String wand;
+    protected Wand wand;
+
+
+    public Wizard() {
+        super();
+    }
+
+    public Wand getWand() {
+        return wand;
+    }
+
+    public void setWand(Wand wand) {
+        this.wand = wand;
+    }
 
     //Se implementan metodos de la clase
     @Override
@@ -57,19 +70,19 @@ public class Wizard extends Character{
 
     @Override
     public int hashCode() {
-        return Objects.hash(super.hashCode(), wand);
+        return Objects.hash(super.hashCode());
     }
 
     @Override
     public String toString() {
-         return String.format(
-                "Wizard{ wand= %s name= %s, location= $s, life= %d, magicEnergy= %d, spells= %s}",
-                wand,
+        return String.format(
+                "Wizard{ name= %s, location= $s, life= %d, magicEnergy= %d, spells= %d, wand= %s}",
                 name,
                 location,
                 life,
                 magicEnergy,
-                spells
+                spells,
+                wand
         );
     }
 }
