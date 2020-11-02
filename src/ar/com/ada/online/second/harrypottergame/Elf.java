@@ -3,6 +3,10 @@ package ar.com.ada.online.second.harrypottergame;
 import java.util.Objects;
 
 public class Elf extends Character {
+    public Elf() {
+        super();
+    }
+
 
     //Se implementan metodos de la clase
     @Override
@@ -60,7 +64,7 @@ public class Elf extends Character {
     @Override
     public String toString() {
         return String.format(
-                "Elf { name= %s, location= $s, life= %d, magicEnergy= %d, spells= %s}",
+                "Elf { name= %s, location= $s, life= %d, magicEnergy= %d, spells= %d}",
                 name,
                 location,
                 life,
