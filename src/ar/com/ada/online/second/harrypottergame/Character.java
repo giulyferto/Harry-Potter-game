@@ -48,11 +48,11 @@ public abstract class Character {
         this.magicEnergy = magicEnergy;
     }
 
-    public Set<Spells> getSpells() {
+    public Set<Spell> getSpells() {
         return spells;
     }
 
-    public void setSpells(Set<Spells> spells) {
+    public void setSpells(Set<Spell> spells) {
         this.spells = spells;
     }
 
