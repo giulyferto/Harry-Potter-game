@@ -1,14 +1,14 @@
 package ar.com.ada.online.second.harrypottergame;
 
 import java.util.Objects;
+import java.util.Set;
 
 public abstract class Character {
     protected String name;
     protected char location;
-    protected Integer life;
-    protected Integer magicEnergy;
-    protected String spells;
-
+    protected Integer life = 100;
+    protected Integer magicEnergy = 100;
+    protected Set <Spells> spells;
 //Constructor vacio
 
     public Character() {
@@ -48,11 +48,11 @@ public abstract class Character {
         this.magicEnergy = magicEnergy;
     }
 
-    public String getSpells() {
+    public Set<Spells> getSpells() {
         return spells;
     }
 
-    public void setSpells(String spells) {
+    public void setSpells(Set<Spells> spells) {
         this.spells = spells;
     }
 
@@ -83,13 +83,12 @@ public abstract class Character {
         return location == that.location &&
                 name.equals(that.name) &&
                 life.equals(that.life) &&
-                magicEnergy.equals(that.magicEnergy) &&
-                spells.equals(that.spells);
+                magicEnergy.equals(that.magicEnergy) && spells.equals(that.spells);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, location, life, magicEnergy, spells);
+        return Objects.hash(name, location, life, magicEnergy,spells);
     }
 
     @Override
